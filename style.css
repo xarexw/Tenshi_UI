@@ -302,3 +302,201 @@
             .sub-text { margin: 0 auto 40px auto; }
             .home-image { display: none; /* Hide person image on small screens if it overlaps too much */ }
         }
+
+                #why-us {
+            width: 100%;
+            min-height: 100vh; /* Aims for 1080p height, but is flexible */
+            background-color: var(--color-dark);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 100px 50px;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        .why-us-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 60px;
+            width: 100%;
+            max-width: 1400px; /* Controls max width on 1920p screens */
+        }
+
+        .heading-wrapper {
+            position: relative;
+            display: inline-block; /* Makes wrapper only as wide as its content */
+            margin-bottom: 10px; /* Added margin to push subheading down */
+        }
+
+        /* New lines using pseudo-elements */
+        .heading-wrapper::before,
+        .heading-wrapper::after {
+            content: '';
+            position: absolute;
+            height: 4px;
+            background-color: rgb(174 180 219 / 69%); /* Grey color from screenshot */
+        }
+
+                /* Top line */
+        .heading-wrapper::before {
+            width: 60%;
+            left: 0;
+            bottom: -15px; /* 15px below the heading */
+        }
+        
+        /* Bottom line */
+        .heading-wrapper::after {
+            width: 65%;
+            left: 20%; /* Starts 20% from the left */
+            bottom: -25px; /* 25px below the heading */
+        }
+
+        .why-us-content {
+            flex: 1 1 55%; /* Takes slightly more than half the space */
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .why-us-heading {
+            font-size: 42px;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: var(--color-red);
+            margin-bottom: 0;
+        }
+
+        .why-us-subheading {
+            font-size: 18px;
+            font-weight: 400;
+            color: var(--color-white);
+            max-width: 500px;
+            margin-bottom: 30px;
+            margin-top: 30px;
+            line-height: 1.5;
+        }
+
+        .features-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .features-list li {
+            display: flex;
+            align-items: flex-start; /* Aligns bullet with text block */
+            gap: 15px;
+        }
+
+        /* Custom red bullet point */
+        .features-list li::before {
+            content: '';
+            display: block;
+            min-width: 12px;
+            height: 12px;
+            background-color: var(--color-red);
+            border-radius: 50%;
+            margin-top: 8px; /* Aligns bullet with first line of text */
+        }
+
+        .feature-item-content h3 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--color-white);
+            margin: 0 0 8px 0;
+        }
+
+        .feature-item-content p {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .why-us-image-container {
+            flex: 1 1 45%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-box {
+            position: relative;
+            width: 100%;
+            max-width: 500px; /* Max size of the image box */
+            aspect-ratio: 4 / 5; /* Creates a responsive box with this ratio */
+        }
+
+        .red-bg-shape {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 85%;
+            height: 85%;
+            background-color: var(--color-red);
+            border-radius: 30px; /* Matches the rounded corners in screenshot */
+        }
+
+        .image-box img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 90%;
+            height: 90%;
+            object-fit: cover;
+            border-radius: 20px; /* Slight rounding on image corners */
+            transform: skewX(5deg);
+            object-position: 20% 50%;
+        }
+
+
+        /* --- RESPONSIVE ADAPTATION (Flexbox + @media only) --- */
+
+        @media (max-width: 992px) {
+            .why-us-wrapper {
+                flex-direction: column; /* Stacks columns vertically */
+                gap: 50px;
+            }
+
+            .why-us-content {
+                flex-basis: auto; /* Resets flex-basis */
+                text-align: center;
+                align-items: center;
+            }
+
+            .features-list li {
+                text-align: left; /* Keeps list text left-aligned */
+            }
+
+            .why-us-image-container {
+                flex-basis: auto;
+                width: 80%; /* Makes image box smaller on tablet */
+            }
+        }
+
+        @media (max-width: 768px) {
+            #why-us {
+                padding: 80px 20px;
+            }
+
+            .why-us-heading {
+                font-size: 32px;
+            }
+
+            .why-us-subheading {
+                font-size: 16px;
+            }
+
+            .why-us-image-container {
+                width: 100%; /* Full width on mobile */
+            }
+
+             .image-box {
+                max-width: 400px; 
+            }
+        }
