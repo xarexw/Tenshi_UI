@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tenshi Gym</title>
+    <!-- Google Fonts: Unbounded -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <header>
+        <!-- <div class="logo">Tenshi</div> -->
+        <div class="logo">
+            <img src="Tenshi_white.png" alt="tenshi_logo" class="logo_img">
+        </div>
+        <nav class="nav-menu">
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#services">Our Services</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </nav>
+        <button class="btn-signup">Sign up</button>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <section id="home">
+        <div class="home-content">
+            <h1 class="main-headline">
+                Твоя <span class="text-red">боротьба</span><br>
+                починається <span class="text-red">тут</span>
+            </h1>
+            <p class="sub-text">
+                Lorem ipsum dolor sit amet consectetur. Habitasse lacus a sit ultrices sem nulla donec pulvinar. Vitanam laoreet senectus porttitor aliquet.
+            </p>
+            <div class="cta-buttons">
+                <a href="#" class="btn-start">Get Start</a>
+                <div class="btn-watch">
+                    <div class="play-icon"></div>
+                    <span>Watch Now</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="home-image">
+            <img src="back2.png" alt="Athlete preparing">
+        </div>
+    </section>
+
+    <script>
+        // Easiest JS for mobile menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,304 @@
+:root {
+            --font-main: 'Unbounded', sans-serif;
+            --color-red: #E50914; /* Adjusted to match screenshot's vibrant red */
+            --color-white: #FFFFFF;
+            --color-dark: #0a0a0a;
+            --color-nav-bg: rgba(255, 255, 255, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--color-dark);
+            color: var(--color-white);
+            overflow-x: hidden;
+        }
+
+        /* --- Header & Nav --- */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            padding: 20px 150px 0px 150px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            position: relative;
+            max-height: 5vh;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .logo_img {
+            max-height: 10vh;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            background-color: var(--color-nav-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 15px 40px;
+            border-radius: 50px;
+            gap: 30px;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links li a:hover,
+        .nav-links li a.active {
+            color: var(--color-white);
+        }
+
+        .nav-links li a.active {
+            font-weight: 700;
+        }
+
+        .btn-signup {
+            background-color: var(--color-red);
+            color: var(--color-white);
+            border: none;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-family: var(--font-main);
+            font-weight: 700;
+            font-size: 14px;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .btn-signup:hover {
+            transform: scale(1.05);
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: var(--color-white);
+        }
+
+        /* --- Section #Home --- */
+        #home {
+            position: relative;
+            width: 100%;
+            height: 100vh; /* Ensures full screen height */
+            min-height: 700px; /* Minimum viable height */
+            /* Aiming for requested 1920x1080 ratio on large screens if possible, 
+               but 100vh is better for actual full screen adaptation. */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 50px 0 150px; /* Matching screenshot left indent */
+            overflow: hidden;
+        }
+
+        /* Background Image with Dim Overlay */
+        #home::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+            radial-gradient(circle at 79% 50%, rgb(255 255 255 / 20%) 27%, rgba(255, 255, 255, 0) 35%),
+            linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), 
+            url('back1.jpg');
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+        }
+
+        #home::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 15%; /* Increase height to cover more of the athlete's bottom part */
+                background: linear-gradient(
+                    to bottom,
+                    transparent 0%,      /* Completely see-through at the top of this gradient area */
+                    rgba(10, 10, 10, 1) 33%, /* Starts getting dark around the knees/shorts */
+                    #0a0a0a 100%         /* Solid black at the very bottom */
+                );
+            z-index: 100; /* Higher than athlete (5) and content (10) */
+            pointer-events: none; /* Allows clicking through it */
+        }
+
+        .home-content {
+            flex: 0 0 50%;
+            z-index: 2;
+            max-width: 650px;
+        }
+
+        .main-headline {
+            font-size: 64px;
+            font-weight: 900;
+            line-height: 1.2;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+
+        .text-red {
+            color: var(--color-red);
+        }
+
+        .sub-text {
+            font-size: 16px;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 50px;
+            max-width: 500px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .btn-start {
+            background-color: var(--color-red);
+            color: var(--color-white);
+            text-decoration: none;
+            padding: 18px 50px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-transform: capitalize;
+            display: inline-block;
+        }
+
+        .btn-watch {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: var(--color-white);
+            text-decoration: none;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .play-icon {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        /* Custom play triangle */
+        .play-icon::after {
+            content: '';
+            width: 0; 
+            height: 0; 
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid transparent;
+            border-left: 12px solid var(--color-red);
+            margin-left: 4px;
+        }
+
+        .home-image {
+            flex: 0 0 45%;
+            height: 100%;
+            position: relative;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-end;
+            z-index: 1;
+        }
+
+        .home-image img {
+            /* Sticking to screenshot placement: anchored bottom right */
+            max-height: 90vh;
+            width: auto;
+            object-fit: contain;
+            /* Attempt to blend the gray background if possible, 
+               though a transparent PNG would be needed for exact match */
+             /* mix-blend-mode: multiply;  <- Uncomment to try blending if background is white/light grey */
+        }
+
+        /* --- Responsive Adaptation (Flexbox ONLY) --- */
+        @media (max-width: 1200px) {
+            #home {
+                padding: 0 30px;
+                justify-content: center;
+            }
+            .main-headline { font-size: 48px; }
+            .home-image {
+                position: absolute;
+                right: -100px;
+                opacity: 0.5;
+                z-index: -1;
+            }
+            .home-content { flex: 0 0 80%; }
+        }
+
+        @media (max-width: 992px) {
+            header { padding: 20px; }
+            .nav-links {
+                display: none; /* Hidden on generic tablet/mobile, toggle needed */
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                flex-direction: column;
+                background-color: var(--color-dark);
+                border-radius: 0;
+                padding: 20px;
+                align-items: center;
+            }
+            .nav-links.active { display: flex; }
+            .hamburger { display: flex; }
+            .btn-signup { display: none; /* Often hidden on smaller mobile headers */ }
+        }
+
+        @media (max-width: 768px) {
+             #home {
+                align-items: center;
+                text-align: center;
+                padding-top: 100px;
+            }
+            .home-content {
+                flex: 0 0 100%;
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+            }
+            .sub-text { margin: 0 auto 40px auto; }
+            .home-image { display: none; /* Hide person image on small screens if it overlaps too much */ }
+        }
