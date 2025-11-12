@@ -8,8 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-
+    <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -21,10 +22,11 @@
         <nav class="nav-menu">
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#services">Our Services</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#why-us">About Us</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#reviews">Reviews</a></li>
                 <li><a href="#faq">FAQ</a></li>
+                <li><a href="#form">Contact Us</a></li>
             </ul>
         </nav>
         <button class="btn-signup">Sign up</button>
@@ -57,6 +59,13 @@
             <img src="back2.png" alt="Athlete preparing">
         </div>
     </section>
+
+    <div id="scrollTopBtn" class="scroll-top-btn">
+        <svg viewBox="0 0 24 24">
+            <path d="M18 15L12 9L6 15"/>
+        </svg>
+    </div>
+
     <section id="why-us">
         <div class="why-us-wrapper">
             
@@ -102,14 +111,417 @@
         </div>
     </section>
 
-    <script>
-        // Easiest JS for mobile menu toggle
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('navLinks');
+    <section id="pricing">
+        
+        <div class="pricing-header">
+            <div class="heading-wrapper">
+                <h2>Абонементи</h2>
+            </div>
+            <h3>Твій досвід вартий більшого</h3>
+        </div>
 
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-    </script>
+        <div class="pricing-cards-container">
+            
+            <!-- Card 1: Basic -->
+            <div class="pricing-card card-basic">
+                <h4>Basic Plan</h4>
+                <p class="price">$50<span> /Monthly</span></p>
+                <p class="description">Perfect for beginners & casual gym-goers</p>
+                <ul class="features">
+                    <li>Full gym access (off-peak hours)</li>
+                    <li>Access to cardio & weight areas</li>
+                    <li>Locker room & shower use</li>
+                    <li>No commitment – cancel anytime</li>
+                </ul>
+                <a href="#" class="btn btn-outline">By This Plan</a>
+            </div>
+
+            <!-- Card 2: Standard (Popular) -->
+            <div class="pricing-card card-standard popular">
+                <h4>Standard Plan</h4>
+                <p class="price">$60<span> /Monthly</span></p>
+                <p class="description">Our most popular plan - great value!</p>
+                <ul class="features">
+                    <li>24/7 gym access</li>
+                    <li>Unlimited group fitness classes</li>
+                    <li>Access to all equipment & facilities</li>
+                    <li>1 free personal training session/month</li>
+                    <li>Member mobile app access</li>
+                </ul>
+                <a href="#" class="btn btn-filled">By This Plan</a>
+            </div>
+
+            <!-- Card 3: Premium -->
+            <div class="pricing-card card-premium">
+                <h4>Premium Plan</h4>
+                <p class="price">$70<span> /Monthly</span></p>
+                <p class="description">For serious athletes or those wanting more</p>
+                <ul class="features">
+                    <li>All Standard Plan features</li>
+                    <li>Unlimited personal training sessions</li>
+                    <li>Nutrition coaching included</li>
+                    <li>Sauna & recovery room access</li>
+                    <li>Priority class booking</li>
+                </ul>
+                <a href="#" class="btn btn-outline">By This Plan</a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="reviews">
+        <div class="reviews-header">
+            <div class="heading-wrapper">
+                <h2>Відгуки борців</h2>
+            </div>
+        </div>
+
+        <div class="carousel-container">
+            <button class="carousel-arrow hidden" id="carousel-left">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 18L9 12L15 6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+
+            <div class="carousel-track-container">
+                <div class="carousel-track">
+                    <!-- Slide 1 -->
+                    <div class="review-card">
+                        <div class="review-card-inner">
+                            <div class="review-header">
+                                <span class="review-quote-icon">“</span>
+                                <img src="rev1.png" alt="Амелія" class="review-avatar">
+                            </div>
+                            <p class="review-text">Lorem ipsum dolor sit amet consectetur. Habitasse lacus a sit ultrices sem nulla donec pulvinar. Vitoe nom laoreet senectus porttitor aliquet. Vel diam ut eu arcu scelerisque erat.</p>
+                            <div class="review-author">
+                                <h4>Амелія</h4>
+                                <span>Student</span>
+                            </div>
+                            <div class="review-rating">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="review-card">
+                        <div class="review-card-inner">
+                            <div class="review-header">
+                                <span class="review-quote-icon">“</span>
+                                <img src="rev2.png" alt="Джон" class="review-avatar">
+                            </div>
+                            <p class="review-text">Lorem ipsum dolor sit amet consectetur. Habitasse lacus a sit ultrices sem nulla donec pulvinar. Vitoe nom laoreet senectus porttitor aliquet. Vel diam ut eu arcu scelerisque erat.</p>
+                            <div class="review-author">
+                                <h4>Джон</h4>
+                                <span>Student</span>
+                            </div>
+                            <div class="review-rating">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="review-card">
+                        <div class="review-card-inner">
+                            <div class="review-header">
+                                <span class="review-quote-icon">“</span>
+                                <img src="rev3.png" alt="Павло" class="review-avatar">
+                            </div>
+                            <p class="review-text">Lorem ipsum dolor sit amet consectetur. Habitasse lacus a sit ultrices sem nulla donec pulvinar. Vitoe nom laoreet senectus porttitor aliquet. Vel diam ut eu arcu scelerisque erat.</Duis aute irure dolor in reprehenderit.</p>
+                            <div class="review-author">
+                                <h4>Павло</h4>
+                                <span>Student</span>
+                            </div>
+                            <div class="review-rating">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 4 (Clone of 1 for example) -->
+                    <div class="review-card">
+                        <div class="review-card-inner">
+                            <div class="review-header">
+                                <span class="review-quote-icon">“</span>
+                                <img src="rev1.png" alt="Амелія" class="review-avatar">
+                            </div>
+                            <p class="review-text">Lorem ipsum dolor sit amet consectetur. Habitasse lacus a sit ultrices sem nulla donec pulvinar. Vitoe nom laoreet senectus porttitor aliquet. Vel diam ut eu arcu scelerisque erat.</p>
+                            <div class="review-author">
+                                <h4>Амелія 2</h4>
+                                <span>Student</span>
+                            </div>
+                            <div class="review-rating">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 5 (Clone of 2 for example) -->
+                    <div class="review-card">
+                        <div class="review-card-inner">
+                            <div class="review-header">
+                                <span class="review-quote-icon">“</span>
+                                <img src="rev2.png" alt="Джон" class="review-avatar">
+                            </div>
+                            <p class="review-text">Lorem ipsum dolor sit amet consectetur. Habitasse lacus a sit ultrices sem nulla donec pulvinar. Vitoe nom laoreet senectus porttitor aliquet. Vel diam ut eu arcu scelerisque erat.</p>
+                            <div class="review-author">
+                                <h4>Джон 2</h4>
+                                <span>Student</span>
+                            </div>
+                            <div class="review-rating">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-arrow" id="carousel-right">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 18L15 12L9 6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+
+            <div class="carousel-indicators">
+                <!-- Dots will be generated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <section id="faq">
+        
+        <div class="faq-container">
+            <div class="faq-header">
+                <div class="heading-wrapper">
+                    <h2>Популярні питання</h2>
+                </div>
+            </div>
+
+            <div class="faq-list">
+                
+                <!-- Item 1 (From Screenshot) -->
+                <div class="faq-item active"> <!-- Start with first item open -->
+                    <button class="faq-question">
+                        <span class="faq-question-content">
+                            <span class="faq-number">01.</span>
+                            <span>Які типи тренувань пропонує TENSHI?</span>
+                        </span>
+                        <span class="faq-icon">–</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>
+                                <strong>Групові заняття:</strong> Для початківців та досвідчених бійців. К-сть занять необмежена. Оплата щомісяця або річна. *
+                            </p>
+                            <p>
+                                <strong>Індивідуальні заняття:</strong> Для тих, хто хоче «укатно» у своєму темпі з особистим тренером.
+                            </p>
+                            <p>
+                                <strong>Спаринги:</strong> Для досвідчених шукачів практики. Раз на тиждень - максимум віддачі. **
+                            </p>
+                            <p>
+                                <strong>Доступ до тренажерного залу / екіпірування:</strong> Для тих, хто прагне покращити спортивну форму. ***
+                            </p>
+                            <div class="asterisk-notes">
+                                <span>* Перші 2 ознайомчих заняття безкоштовні</span>
+                                <span>** Для знайомих осіб та колишніх бійців клубу</span>
+                                <span>*** Для бійців клубу - безкоштовно.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span class="faq-question-content">
+                            <span class="faq-number">02.</span>
+                            <span>Чи є обмеження до вступу в TENSHI (вік, стан здоров'я, тд)?</span>
+                        </span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span class="faq-question-content">
+                            <span class="faq-number">03.</span>
+                            <span>Яке екіпірування необхідно, щоб почати?</span>
+                        </span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>
+                                Вам знадобляться лише зручний спортивний одяг та взуття. Рукавички, бинти та інше базове екіпірування ми надаємо на перших заняттях.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span class="faq-question-content">
+                            <span class="faq-number">04.</span>
+                            <span>Є можливість заморозки абонементу?</span>
+                        </span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>
+                                Так, усі річні абонементи передбачають можливість "заморозки" на термін до 30 днів.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span class="faq-question-content">
+                            <span class="faq-number">05.</span>
+                            <span>Як часто відбуваються змагання та івенти?</span>
+                        </span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>
+                                Ми проводимо внутрішні клубні змагання щоквартально, а також регулярно організовуємо майстер-класи з відомими бійцями та семінари.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <section id="form">
+        
+        <div class="form-container">
+            <div class="form-header">
+                <div class="heading-wrapper">
+                    <h2>Форма</h2>
+                </div>
+                <h3>Не зволікай, твій час настав!</h3>
+            </div>
+
+            <form class="contact-form" action="#" method="POST">
+                
+                <!-- Row 1 -->
+                <div class="form-group">
+                    <label for="fname">Ім'я</label>
+                    <input type="text" id="fname" name="firstname" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="lname">Прізвище</label>
+                    <input type="text" id="lname" name="lastname" required>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="form-group">
+                    <label for="experience">Досвід</label>
+                    <div class="select-wrapper">
+                        <select id="experience" name="experience" required>
+                            <option value="" disabled selected>Оберіть ваш рівень...</option>
+                            <option value="beginner">Початківець (0-1 рік)</option>
+                            <option value="intermediate">Середній (1-3 роки)</option>
+                            <option value="advanced">Досвідчений (3+ роки)</option>
+                        </select>
+                        <span class="select-icon">+</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="trainer">Тренер</label>
+                    <div class="select-wrapper">
+                        <select id="trainer" name="trainer" required>
+                            <option value="" disabled selected>Оберіть тренера...</option>
+                            <option value="any">Будь-який</option>
+                            <option value="ivan">Іван Петренко</option>
+                            <option value="olga">Ольга Сидоренко</option>
+                        </select>
+                        <span class="select-icon">+</span>
+                    </div>
+                </div>
+                
+                <!-- Row 3 -->
+                <div class="form-group full-width">
+                    <label for="question">Питання?</label>
+                    <textarea id="question" name="question" rows="1"></textarea>
+                </div>
+                
+                <!-- Button -->
+                <div class="form-footer">
+                    <button type="submit" class="btn-submit">Підтвердити</button>
+                </div>
+
+            </form>
+        </div>
+
+    </section>
+
+    <footer>
+        
+        <!-- Logo & Socials -->
+        <div class="footer-brand">
+            <img src="Tenshi_white.png" alt="Tenshi Logo" class="footer-logo">
+            <div class="social-links">
+                <a href="#" class="social-icon"><i class="fa-brands fa-snapchat"></i></a>
+                <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" class="social-icon"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="footer-newsletter">
+            <h3>Підписуйся - дізнавайся першим</h3>
+            <form class="newsletter-wrapper" action="#">
+                <input type="email" class="newsletter-input" placeholder="Email" required>
+                <button type="submit" class="newsletter-btn">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </form>
+        </div>
+
+        <!-- Contacts -->
+        <div class="footer-contacts">
+            <h3>Контакти</h3>
+            <ul class="contact-list">
+                <li class="contact-item">
+                    <div class="contact-icon-circle">
+                        <i class="fa-regular fa-envelope"></i>
+                    </div>
+                    <span>Email: abc@design.com</span>
+                </li>
+                <li class="contact-item">
+                    <div class="contact-icon-circle">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <span>Телефон: +380xxxxxxxxx</span>
+                </li>
+                <li class="contact-item">
+                    <div class="contact-icon-circle">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <span>Локація: Львів, Україна</span>
+                </li>
+            </ul>
+        </div>
+
+    </footer>
+
 </body>
 </html>
