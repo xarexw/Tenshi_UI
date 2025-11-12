@@ -153,7 +153,7 @@
             background: 
             radial-gradient(circle at 79% 50%, rgb(255 255 255 / 20%) 27%, rgba(255, 255, 255, 0) 35%),
             linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), 
-            url('back1.jpg');
+            url('src/back1.jpg');
             background-size: cover;
             background-position: center;
             z-index: -1;
