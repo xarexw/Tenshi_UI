@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tenshi Gym</title>
-    <!-- Google Fonts: Unbounded -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -15,7 +14,6 @@
 <body>
 
     <header>
-        <!-- <div class="logo">Tenshi</div> -->
         <div class="logo">
             <img src="src/Tenshi_white.png" alt="tenshi_logo" class="logo_img">
         </div>
@@ -60,6 +58,55 @@
         </div>
     </section>
 
+    <section id="about-us">
+        
+        <div class="about-content">
+            <div class="heading-wrapper">
+                <h2>Про нас</h2>
+            </div>
+            <h3>Бійцівський клуб, де цінності перш за все</h3>
+            <!-- <p>
+                Lorem ipsum dolor sit amet consectetur. Habitasse lacus a sit ultrices sem nulla donec pulvinar. Vitae nam laoreet senectus porttitor aliquet. Vel diam ut eu arcu scelerisque erat. A lorem curabitur consectetur in
+            </p> -->
+        </div>
+         <div class="stats-bar-container">
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">05</span>
+                        <span class="stat-label">Років</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Бійців</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">6</span>
+                        <span class="stat-label">Залів</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">10</span>
+                        <span class="stat-label">Тренерів</span>
+                    </div>
+                </div>
+            </div>
+
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="src/photo1.webp" alt="Фото залу 2">
+            </div>
+            <div class="gallery-item">
+                <img src="src/photo2.webp" alt="Фото залу 3">
+            </div>
+            <div class="gallery-item">
+                <img src="src/photo3.webp" alt="Фото залу 4">
+            </div>
+            <div class="gallery-item">
+                <img src="src/photo4.webp" alt="Фото залу 5">
+            </div>
+        </div>
+
+    </section>
+
     <div id="scrollTopBtn" class="scroll-top-btn">
         <svg viewBox="0 0 24 24">
             <path d="M18 15L12 9L6 15"/>
@@ -69,7 +116,6 @@
     <section id="why-us">
         <div class="why-us-wrapper">
             
-            <!-- Left Column: Content -->
             <div class="why-us-content">
                 <div class="heading-wrapper">
                     <h2 class="why-us-heading">Чому обирають нас</h2>
@@ -100,7 +146,6 @@
                 </ul>
             </div>
 
-            <!-- Right Column: Image -->
             <div class="why-us-image-container">
                 <div class="image-box">
                     <div class="red-bg-shape"></div>
@@ -109,6 +154,58 @@
             </div>
 
         </div>
+    </section>
+
+<section id="map-section">
+        
+        <div class="map-header">
+            <div class="heading-wrapper">
+                <h2>Наші зали</h2>
+            </div>
+            <h3>Твоя локація – Твоє місце сили</h3>
+        </div>
+
+        <div class="map-container">
+            <img src="src/lviv_map.jpg" alt="club map" class="map-image">
+            
+            <div class="map-pin pin-1">
+                <img src="src/pin,png" alt="Map Pin" class="pin-icon">
+                <div class="pin-info">
+                    <h4>Зал Боротьби</h4>
+                    <p>м. Львів, вул. ЧЧЧЧ</p>
+                    <div class="hours">
+                        <i class="fa-regular fa-clock"></i>
+                        <span>8:00 - 21:00</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="map-pin pin-2">
+                <img src="src/pin,png" alt="Map Pin" class="pin-icon">
+                <div class="pin-info">
+                    <h4>Тренажерний Зал</h4>
+                    <p>м. Львів, вул. Хмельницького</p>
+                    <div class="hours">
+                        <i class="fa-regular fa-clock"></i>
+                        <span>7:00 - 22:00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="map-pin pin-3">
+                <img src="src/pin,png" alt="Map Pin" class="pin-icon">
+                <div class="pin-info">
+                    <h4>Головне Додзьо</h4>
+                    <p>м. Львів, вул. Хмельницького</sP>
+                    <div class="hours">
+                        <i class="fa-regular fa-clock"></i>
+                        <span>10:00 - 20:00</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
     </section>
 
     <section id="pricing">
@@ -122,7 +219,6 @@
 
         <div class="pricing-cards-container">
             
-            <!-- Card 1: Basic -->
             <div class="pricing-card card-basic">
                 <h4>Basic Plan</h4>
                 <p class="price">$50<span> /Monthly</span></p>
@@ -136,7 +232,6 @@
                 <a href="#" class="btn btn-outline">By This Plan</a>
             </div>
 
-            <!-- Card 2: Standard (Popular) -->
             <div class="pricing-card card-standard popular">
                 <h4>Standard Plan</h4>
                 <p class="price">$60<span> /Monthly</span></p>
@@ -151,7 +246,6 @@
                 <a href="#" class="btn btn-filled">By This Plan</a>
             </div>
 
-            <!-- Card 3: Premium -->
             <div class="pricing-card card-premium">
                 <h4>Premium Plan</h4>
                 <p class="price">$70<span> /Monthly</span></p>
@@ -186,7 +280,7 @@
 
             <div class="carousel-track-container">
                 <div class="carousel-track">
-                    <!-- Slide 1 -->
+
                     <div class="review-card">
                         <div class="review-card-inner">
                             <div class="review-header">
@@ -203,7 +297,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Slide 2 -->
+
                     <div class="review-card">
                         <div class="review-card-inner">
                             <div class="review-header">
@@ -220,7 +314,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Slide 3 -->
+
                     <div class="review-card">
                         <div class="review-card-inner">
                             <div class="review-header">
@@ -237,7 +331,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Slide 4 (Clone of 1 for example) -->
+
                     <div class="review-card">
                         <div class="review-card-inner">
                             <div class="review-header">
@@ -254,7 +348,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Slide 5 (Clone of 2 for example) -->
+
                     <div class="review-card">
                         <div class="review-card-inner">
                             <div class="review-header">
@@ -271,6 +365,23 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="review-card">
+                        <div class="review-card-inner">
+                            <div class="review-header">
+                                <span class="review-quote-icon">“</span>
+                                <img src="src/rev3.png" alt="Павло" class="review-avatar">
+                            </div>
+                            <p class="review-text">Lorem ipsum dolor sit amet consectetur. Habitasse lacus a sit ultrices sem nulla donec pulvinar. Vitoe nom laoreet senectus porttitor aliquet. Vel diam ut eu arcu scelerisque erat.</Duis aute irure dolor in reprehenderit.</p>
+                            <div class="review-author">
+                                <h4>Ігор</h4>
+                                <span>Student</span>
+                            </div>
+                            <div class="review-rating">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -281,7 +392,7 @@
             </button>
 
             <div class="carousel-indicators">
-                <!-- Dots will be generated by JS -->
+                <!-- JS -->
             </div>
         </div>
     </section>
@@ -297,8 +408,7 @@
 
             <div class="faq-list">
                 
-                <!-- Item 1 (From Screenshot) -->
-                <div class="faq-item active"> <!-- Start with first item open -->
+                <div class="faq-item active">
                     <button class="faq-question">
                         <span class="faq-question-content">
                             <span class="faq-number">01.</span>
@@ -329,7 +439,6 @@
                     </div>
                 </div>
 
-                <!-- Item 2 -->
                 <div class="faq-item">
                     <button class="faq-question">
                         <span class="faq-question-content">
@@ -347,7 +456,6 @@
                     </div>
                 </div>
 
-                <!-- Item 3 -->
                 <div class="faq-item">
                     <button class="faq-question">
                         <span class="faq-question-content">
@@ -365,7 +473,6 @@
                     </div>
                 </div>
 
-                <!-- Item 4 -->
                 <div class="faq-item">
                     <button class="faq-question">
                         <span class="faq-question-content">
@@ -383,7 +490,6 @@
                     </div>
                 </div>
 
-                <!-- Item 5 -->
                 <div class="faq-item">
                     <button class="faq-question">
                         <span class="faq-question-content">
@@ -407,6 +513,11 @@
     </section>
 
     <section id="form">
+
+        <video id="form-video-bg" autoplay muted loop playsinline>
+            <source src="src/backvideo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
         
         <div class="form-container">
             <div class="form-header">
@@ -418,7 +529,6 @@
 
             <form class="contact-form" action="#" method="POST">
                 
-                <!-- Row 1 -->
                 <div class="form-group">
                     <label for="fname">Ім'я</label>
                     <input type="text" id="fname" name="firstname" required>
@@ -429,15 +539,14 @@
                     <input type="text" id="lname" name="lastname" required>
                 </div>
 
-                <!-- Row 2 -->
                 <div class="form-group">
                     <label for="experience">Досвід</label>
                     <div class="select-wrapper">
                         <select id="experience" name="experience" required>
-                            <option value="" disabled selected>Оберіть ваш рівень...</option>
-                            <option value="beginner">Початківець (0-1 рік)</option>
-                            <option value="intermediate">Середній (1-3 роки)</option>
-                            <option value="advanced">Досвідчений (3+ роки)</option>
+                            <option value="" class="select-option" disabled selected>Оберіть ваш рівень...</option>
+                            <option value="beginner" class="select-option">Початківець (0-1 рік)</option>
+                            <option value="intermediate" class="select-option">Середній (1-3 роки)</option>
+                            <option value="advanced" class="select-option">Досвідчений (3+ роки)</option>
                         </select>
                         <span class="select-icon">+</span>
                     </div>
@@ -447,22 +556,20 @@
                     <label for="trainer">Тренер</label>
                     <div class="select-wrapper">
                         <select id="trainer" name="trainer" required>
-                            <option value="" disabled selected>Оберіть тренера...</option>
-                            <option value="any">Будь-який</option>
-                            <option value="ivan">Іван Петренко</option>
-                            <option value="olga">Ольга Сидоренко</option>
+                            <option value="" class="select-option" disabled selected>Оберіть тренера...</option>
+                            <option value="any" class="select-option">Будь-який</option>
+                            <option value="ivan" class="select-option">Іван Петренко</option>
+                            <option value="olga" class="select-option">Ольга Сидоренко</option>
                         </select>
                         <span class="select-icon">+</span>
                     </div>
                 </div>
                 
-                <!-- Row 3 -->
                 <div class="form-group full-width">
                     <label for="question">Питання?</label>
                     <textarea id="question" name="question" rows="1"></textarea>
                 </div>
                 
-                <!-- Button -->
                 <div class="form-footer">
                     <button type="submit" class="btn-submit">Підтвердити</button>
                 </div>
@@ -474,7 +581,6 @@
 
     <footer>
         
-        <!-- Logo & Socials -->
         <div class="footer-brand">
             <img src="src/Tenshi_white.png" alt="Tenshi Logo" class="footer-logo">
             <div class="social-links">
@@ -485,7 +591,6 @@
             </div>
         </div>
 
-        <!-- Newsletter -->
         <div class="footer-newsletter">
             <h3>Підписуйся - дізнавайся першим</h3>
             <form class="newsletter-wrapper" action="#">
@@ -496,7 +601,6 @@
             </form>
         </div>
 
-        <!-- Contacts -->
         <div class="footer-contacts">
             <h3>Контакти</h3>
             <ul class="contact-list">
@@ -504,7 +608,7 @@
                     <div class="contact-icon-circle">
                         <i class="fa-regular fa-envelope"></i>
                     </div>
-                    <span>Email: abc@design.com</span>
+                    <span>Email: tenshi@fight.com</span>
                 </li>
                 <li class="contact-item">
                     <div class="contact-icon-circle">
