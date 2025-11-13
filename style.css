@@ -1,4 +1,4 @@
-:root {
+        :root {
             --font-main: 'Unbounded', sans-serif;
             --color-red: #E50914;
             --color-white: #FFFFFF;
@@ -8,6 +8,10 @@
             --color-grey-dark: rgba(255, 255, 255, 0.3);
             --color-border: rgba(255, 255, 255, 0.2);
             --color-footer-bg: #1F1F1F;
+        }
+
+        html {
+            scroll-behavior: smooth; 
         }
 
         * {
@@ -195,7 +199,7 @@
             line-height: 1.6;
             color: rgba(255, 255, 255, 0.8);
             margin-bottom: 50px;
-            max-width: 500px;
+            max-width: 520px;
         }
 
         .cta-buttons {
@@ -213,6 +217,12 @@
             font-weight: 700;
             text-transform: capitalize;
             display: inline-block;
+        }
+
+        .btn-start:hover {
+            background: var(--color-white);
+            color: var(--color-dark);
+            transform: scale(1.05);
         }
 
         .btn-watch {
@@ -244,6 +254,12 @@
             border-bottom: 8px solid transparent;
             border-left: 12px solid var(--color-red);
             margin-left: 4px;
+        }
+
+        .play-icon:hover {
+            background: var(--color-white);
+            color: var(--color-dark);
+            transform: scale(1.05);
         }
 
         .home-image {
@@ -351,11 +367,52 @@
             .btn-signup { display: none;}
         }
 
+        @media (max-width: 900px) {
+             #home {
+                align-items: center;
+                text-align: center;
+                padding: 100px 20px 0 20px;
+            }
+            .home-content {
+                flex: 0 0 80%;
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .main-headline {
+                font-size: 35px;
+            }
+
+            .sub-text {
+                font-size: 14px;
+                max-width: 90%;
+                margin: 0 auto 40px auto;
+            }
+            .home-image { opacity: 0.2; }
+            
+            .cta-buttons {
+                flex-direction: column;
+                width: 100%;
+                max-width: 300px;
+                gap: 20px;
+            }
+
+            .home-image { display: none; }
+
+            .scroll-top-btn {
+                bottom: 40px;
+                right: 20px;
+                width: 48px;
+                height: 48px;
+            }
+        }
+
         @media (max-width: 768px) {
              #home {
                 align-items: center;
                 text-align: center;
-                padding-top: 100px;
+                padding: 100px 30px;
             }
             .home-content {
                 flex: 0 0 100%;
@@ -527,7 +584,7 @@
             .about-content p { font-size: 14px; margin-bottom: 30px; }
             
             .about-stats {
-                padding: 20px 0;
+                padding: 20px 30px;
             }
             .stat-item {
                 flex: 1 1 40%; /* 2 stats per row */
@@ -538,6 +595,7 @@
             .gallery-container {
                 padding: 20px;
                 gap: 15px;
+                justify-items: center;
             }
             .gallery-item { flex: 0 0 180px; }
         }
@@ -947,6 +1005,7 @@
             font-weight: 700;
             color: var(--color-white);
             margin-top: 30px;
+            margin-bottom: 20px;
         }
 
         .pricing-cards-container {
@@ -955,7 +1014,7 @@
             align-items: stretch; /* equal height */
             gap: 30px;
             width: 100%;
-            max-width: 1200px;
+            max-width: 1300px;
         }
 
         .pricing-card {
